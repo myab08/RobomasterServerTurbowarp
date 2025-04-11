@@ -172,19 +172,70 @@ python -m venv venv
 // Met les liens vers l'installation de VS-code + un tuto
 
 ### PyCharm
-// Met les liens de Pycham
+PyCharm	est	un	IDE	 (Integrated	Development	Environment).	Il	s'agit, tout	comme	jEdit,	d'un	logiciel	
+permettant	d'intégrer	dans	une même	fenêtre	tous	les	éléments	utiles	à	la	programmation	en	python
+:	un	éditeur	de	texte	pour écrire	des	scripts,	une	console	pour	exécuter	des	programmes,	ainsi	qu'un
+explorateur	de	fichiers	pour	parcourir	le	projet	en	cours.
+
+La ligne de commande pour télécharger la version clasique: 
+
+```shell
+sudo snap install pycharm-community --classic
+```
+
+Pour plus d'information sur le téléchargement:
+
+https://doc.ubuntu-fr.org/pycharm
+
+https://pycharm-community-edition.fr.download.it/ 
+
+Window 
+https://www.jetbrains.com/fr-fr/pycharm/download/?section=windows
+
+Mac OS
+https://www.jetbrains.com/fr-fr/pycharm/download/?section=mac
+
+Linux
+https://www.jetbrains.com/fr-fr/pycharm/download/?section=linux
+
+Un tutoriel sur l'utilisation de Pycharm 
+https://doplab.unil.ch/wp-content/uploads/2018/09/Pycharm_Tutorial-v1.pdf
+
 
 ## Installation de Turbowarp
 
-// Pour le debug on utilise plutôt la version en ligne car elle nous permets d'avoir les messages d'erreurs dans la console JavaScript
+Il est possible d'utiliser Turbowarp avec la version en ligne ou celui de DeskTop. Or il est conseiller d'utiliser la version en ligne, pour le debug car elle nous permets d'avoir les messages d'erreurs dans la console JavaScript. 
 
-// Il est possible d'installer la version DeskTop Explique comment
+Voici le lien vers le Turbowarp version en ligne:
+https://turbowarp.org/editor
+
+Voici la ligne de commande pour télécharger sur Desktop:
+
+```shell
+
+```
+Pour plus d'information sur le téléchargement:
+https://desktop.turbowarp.org/
+
+Window 
+https://turbowarp.fr.softonic.com/
+
+Turbowarp pour Raspberry Pi
+https://pi-apps.io/install-app/install-turbowarp-on-raspberry-pi/ 
+
+La documentation de Turbowarp 
+https://docs.turbowarp.org/ 
+
 
 ## Installation et configuration de Git et GitHub
+
 
 // Instroduction sur git à quoi ca sert
 
 ### Installation de git
+
+Site officiel de Git:
+https://git-scm.com/
 
 #### Windows
 
@@ -198,11 +249,16 @@ python -m venv venv
 ```
 
 ### Configuration de Github
-// Expliquer que c'est le repo du projet
+
+Pour pouvoir récuperer la totalité du code à partir de Github. Il faut crée une copie dans votre environnement de développement, avec la commande, à sasir dans le terminal, suivant:
+
 ```shell
+# copier le dosier avec lien du Github 
 git clone https://github.com/Cavernos/RobomasterServerTurbowarp.git
+# une fois le code est copié, rentrer dans le dosier RobomasterServerTurbowarp
 cd RobomasterServerTurbowarp
 ```
+
 
 Un récapitulatif des commandes git est disponible ci-dessous:
 ```
@@ -221,36 +277,69 @@ git checkout <branch_name> <file_name>   |   get a file from another branch
 Pour plus de précision sur les commandes git, vous pouvez consulter la [documentation](https://git-scm.com/docs).
 
 # Installation de Node.JS
+Citter de l'introduction sur site officiel de Nodje
+
+
+En tant que moteur d'exécution JavaScript asynchrone orienté événements, Node.js est conçu pour construire des applications réseau évolutives. Dans l'exemple "hello world" suivant, de nombreuses connexions peuvent être gérées simultanément. À chaque connexion, la fonction callback est exécutée, mais s'il n'y a pas de travail à faire, Node.js se met en veille.
+
+```shell
+
+```
+Site officielle de Node.JS: 
+https://nodejs.org/en
+
+Pour plus d'information sur le téléchargement:
+https://nodejs.org/en/download
+
+La documentation de Node.JS: 
+https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
+
 
 
 
 # Installation et configuration du projet
 
-// Explique le projet
+Consigne de base : Préparer aux étudiants de I1 de l’année prochaine un manuel qui va les aider à utiliser un outil de type scratch pour programmer le robot pour répondre à un cahier de charge.
+
+Notre objectif: 
 // le but est de créer une appli pour remplacer robomaster ...
 
 ## Maintenabilité du code
+Pour une gestion effica du projet, on utilise git pour .... Github 
+
 // Actualisation du code
+
 // Récupération des changements
+
 // Ajout de Changement
 
 ### Récupération des changements
 // Exlication de la méthode pull 
-```
+
+Cette méthode permet de récupérer les nouvelles changement du code ....
+
+```shell
 git pull origin branch_name
 ```
 
 ### Ajout de changements
 // Comment on ajoute
-```
+Ces commandes permettent de remettre vos changements par raport à la version précédent du code sur Github.
+
+```shell
 git add .
-git commit -m "message to commit" -m "new line on commit"
+# mettez vos messages ou commentaires dans la partie "message to commit"
+# metter un nom à la nouvelle ....dans la partie new line on commit"
+git commit -m "message to commit" -m "new line on commit" 
+# Renvoie les changement dans le dossier principal 
 git push origin branch_name
 ```
 
 ## Coté serveur (Python)
 
 // Expliques qu'on est sur une api flask en python
+
+Flask est une libra
 
 ### Lancement du serveur de développemenet en localhost
 // Il faut aller dans le dossier du projet
@@ -275,6 +364,7 @@ robomaster_cli
 
 // Définition de l'environnement avant le build changer l'environnement en et l'host et le port en fonction de vos besoins
 config/config.ts
+
 ```typescript
 const config = {
     robomaster_api: {
